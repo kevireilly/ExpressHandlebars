@@ -1,0 +1,20 @@
+{
+  "name": "ExpressHandlebars",
+  "version": "0.0.1",
+  "description": "Simple Express 4.x and Handlebars 1.x template engine example",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kevireilly/ExpressHandlebars.git"
+  },
+  "author": "Kevin Reilly <kevin@vishun.net>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevireilly/ExpressHandlebars/issues"
+  },
+  "homepage": "https://github.com/kevireilly/ExpressHandlebars",
+  "dependencies": {
+    "express": "^4.9.5",
+    "express-handlebars": "^1.1.0"
+  }
+}

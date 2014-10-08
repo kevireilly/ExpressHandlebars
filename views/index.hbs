@@ -1,0 +1,25 @@
+<center>
+  <h1> ExpressHandlebars </h1>
+  <h2>
+    views/index.hbs <br />
+    is the body of <br />
+    views/layouts/main.hbs
+  </h2>
+  <br />
+  The `page` variable is the page's title <br />
+  To render a different body content, simply change <br />
+  'index' and have a views/layout/otherpage.hbs
+  <div style="text-align:left;width:300px;background:#333;color:#eee;padding:5px;margin:10px;">
+    <pre>
+  // Handle index requests
+  app.get('/', function(req, res){
+    console.log('index.hbs loaded');
+    res.render('index', {
+      page: 'Main page',
+      foo: 'bar'
+    });
+  });
+    </pre>
+  </div>
+  `foo` variable passed from route: {{foo}}
+</center>
