@@ -26,6 +26,15 @@ app.get('/', function(req, res){
   });
 });
 
+// Handle other/page requests
+app.get('/other/page', function(req, res){
+  console.log('otherpage.hbs loaded');
+  res.render('otherpage', {
+    page: 'Other page',
+    foo: 'baz'
+  });
+});
+
 // Listen on port 8080
 app.listen(port, function() {
   console.log('Listening on port ' + port);

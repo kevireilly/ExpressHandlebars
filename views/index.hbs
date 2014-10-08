@@ -8,7 +8,7 @@
   <br />
   The `page` variable is the page's title <br />
   To render a different body content, simply change <br />
-  'index' and have a views/layout/otherpage.hbs
+  'index' and have a views/otherpage.hbs
   <div style="text-align:left;width:300px;background:#333;color:#eee;padding:5px;margin:10px;">
     <pre>
   // Handle index requests
@@ -19,7 +19,19 @@
       foo: 'bar'
     });
   });
+
+  // Handle other/page requests
+  app.get('/other/page', function(req, res){
+    console.log('otherpage.hbs loaded');
+    res.render('otherpage', {
+      page: 'Other page',
+      foo: 'baz'
+    });
+  });
     </pre>
   </div>
-  `foo` variable passed from route: {{foo}}
+  `foo` variable passed from route: {{foo}} <br />
+  <br />
+  Other page example: <a href="/other/page">views/otherpage.hbs</a> <br />
+  Static file example: <a href="/static.txt">public/static.txt</a>
 </center>
